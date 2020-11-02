@@ -34,4 +34,4 @@ $ npm run start
 $ npm run generate
 ```
 
-Check out the YouTube video version for this project here [YouTube](https://www.youtube.com/channel/UCNCzNrpq0fHxFqQYCmbwAcA).
+Check out the for an upcoming YouTube video version for this project soon here [YouTube](https://www.youtube.com/channel/UCNCzNrpq0fHxFqQYCmbwAcA).
