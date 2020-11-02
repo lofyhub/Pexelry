@@ -42,8 +42,8 @@
 <script>
 
 export default {
-  components(){ 
-  Photos:()=> import('@/components/photos');
+  components:{ 
+  Photos:()=> import('@/components/photos')
   },
   data(){
     return{

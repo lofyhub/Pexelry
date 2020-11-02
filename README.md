@@ -1,7 +1,5 @@
 # Pexelry
 
----
-
 ![Pexelry Image Finder](/assets/pexels-front-image.JPG "Pexels Front Image")
 
 pexelry is an image finder web application that leverages the [Pexels](https://www.pexels.com/api/) api to find images related to a specific search.
@@ -12,6 +10,12 @@ pexelry is an image finder web application that leverages the [Pexels](https://w
 > - Have NodeJs installed.
 
 ## Build Setup
+
+Pexelry is built on:
+
+    - Vue.js
+    - Bootstrap-vue
+    - Nuxt.js
 
 Clone the repo to your local machine and then follow the steps below
 
