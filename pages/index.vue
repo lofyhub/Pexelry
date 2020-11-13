@@ -23,6 +23,10 @@
               </div>
 
   </div>
+  <div v-if="photos.length == 0 " class="error">
+    <p>Waiting for connection !</p>
+
+  </div>
       <div class="photos-wrapper">
         <Photos
             v-for="photo in photos" 
@@ -30,6 +34,7 @@
             :name="photo.photographer" 
             :attrib="photo.photographer_url"
             :img="photo.src.medium"
+            :imgcap="photo.src.portrait"
             :id="photo.id"
           />
 
@@ -53,13 +58,17 @@ export default {
     }
   },
  async created(){
-  //  runs every time the page renders
+  //Called synchronously after the instance is created
    const headers = { "Authorization": this.api_key};
    try {
     const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
     const data = await response.json();
-    this.photos= data.photos;
+    const photos = data.photos;
+    
+    // this.$store.commit('addPhotos',photos)
+    this.photos= photos;
     this.search='';
+    console.log(this.photos);
      
    } catch (error) {
      console.log(error);
@@ -73,14 +82,21 @@ export default {
     async getSearch(){
   const headers = { "Authorization": this.api_key};
   // fetch photos from the api
-   
    const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
    const data = await response.json();
-   this.photos= data.photos;
-   this.search='';
+   const photos = data.photos;
+    // store.commit('addPhotos',photos)
+    this.photos= photos;
+    this.search='';
    
 
-    }
+    },
+   
+  },
+  computed: {
+    getPhotos(){
+      return this.photos = this.$store.getters.getPhotos;
+  }
   }
 }
 </script>
@@ -133,11 +149,17 @@ button{
     outline: none;
   }
 .photos-wrapper{
-  width: 1140px;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   padding: 3rem 0;
 
+}
+.error{
+  padding: 4rem 0;
+}
+.error p{
+  font-size: 24px;
 }
 </style>
