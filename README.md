@@ -18,7 +18,7 @@ Pexelry is built with:
     - Nuxt.js
     - Vuex
 
-Clone the repo to your local machine and then follow the steps below
+Clone the repo to your local machine and then follow the procedure below
 
 ```bash
 # installs all the dependencies needed for this project
@@ -34,5 +34,9 @@ $ npm run start
 # generates the static project
 $ npm run generate
 ```
+
+#### You can Contribute to this project if you want to
+
+clone the repo and fix issues :v:
 
 Check out the for an upcoming YouTube video version for this project soon here [YouTube](https://www.youtube.com/channel/UCNCzNrpq0fHxFqQYCmbwAcA).
