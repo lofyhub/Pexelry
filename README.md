@@ -1,6 +1,6 @@
 # Pexelry
 
-:earth_americas;
+:earth_americas:
 
 ![Pexelry Image Finder](/assets/pexels-front-image.JPG "Pexelry Front Page")
 
@@ -23,7 +23,7 @@ Pexelry is built with:
 Clone the repo to your local machine and then follow the procedure below
 
 ```bash
-# installs all the dependencies needed for this project
+# installs all the packagees and dependencies needed for this project
 $ npm install
 
 # serve with hot reload at localhost:3000
