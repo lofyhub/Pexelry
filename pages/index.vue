@@ -23,10 +23,7 @@
               </div>
 
   </div>
-  <div v-if="photos.length == 0 " class="error">
-    <p>Waiting for connection !</p>
 
-  </div>
       <div class="photos-wrapper">
         <Photos
             v-for="photo in photos" 
@@ -47,14 +44,15 @@
 <script>
 
 export default {
+  
   components:{ 
   Photos:()=> import('@/components/photos')
   },
   data(){
     return{
       api_key:'563492ad6f9170000100000111d2967d21b84fa6aedf06aba0226fd8',
-      photos:[],
-      search:'car'
+      photos: [],
+      search:'nature'
     }
   },
  async created(){
@@ -64,40 +62,36 @@ export default {
     const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
     const data = await response.json();
     const photos = data.photos;
-    
-    // this.$store.commit('addPhotos',photos)
-    this.photos= photos;
+    this.$store.commit('addPhotos',photos)
+    this.photos=this.$store.getters.getPhotos[0];
     this.search='';
-    console.log(this.photos);
-     
    } catch (error) {
      console.log(error);
-     
    }
-
 
   },
   methods:{
-    // runs only on field search
-    async getSearch(){
-  const headers = { "Authorization": this.api_key};
-  // fetch photos from the api
-   const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
-   const data = await response.json();
-   const photos = data.photos;
-    // store.commit('addPhotos',photos)
-    this.photos= photos;
-    this.search='';
+        // runs only on field search
+        async getSearch(){
+         const headers = { "Authorization": this.api_key};
+      // fetch photos from the api
+        try {
+        const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
+        const data = await response.json();
+        const photos = data.photos;
+          this.$store.commit('addPhotos',photos)
+          this.photos=this.$store.getters.getPhotos[0];
+          this.search='';
+          
+        } catch (error) {
+          console.log(error);
+          
+        }
    
 
     },
    
   },
-  computed: {
-    getPhotos(){
-      return this.photos = this.$store.getters.getPhotos;
-  }
-  }
 }
 </script>
 

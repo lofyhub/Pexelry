@@ -1,5 +1,7 @@
 # Pexelry
 
+:earth_americas;
+
 ![Pexelry Image Finder](/assets/pexels-front-image.JPG "Pexelry Front Page")
 
 Pexelry is an image finder web application that leverages the [Pexels](https://www.pexels.com/api/) api to find images related to a specific search.

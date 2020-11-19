@@ -2,7 +2,7 @@
         <div class="card" style="width: 25rem;">
         <img class="card-img-top" :src="img" :alt="attrib" style="height: 20rem;">
         <div class="card-body">
-            <img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"><span><p class="card-text">{{name}}</p></span>
+            <span><img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"></span><p class="card-text">{{name}}</p>
             
         </div>
         </div>
@@ -27,6 +27,10 @@ export default {
     height: 2rem;
     padding: 0;
     margin: 0;
+}
+p{
+    display: inline-block;
+    padding-left: 25px;
 }
 
 </style>
