@@ -6,10 +6,7 @@ export const state = ()=>({
 export const  mutations = {
     // mutate the photos array here
     addPhotos(state,payload){
-        state.photos.push(payload)
-    },
-    addPhotoSearch(state,payload){
-      state.photos.push(payload)
+        state.photos[0].push(payload)
     }
 }
 export const  actions={

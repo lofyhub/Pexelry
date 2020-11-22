@@ -62,9 +62,7 @@ export default {
     const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
     const data = await response.json();
     const photos = data.photos;
-    this.$store.commit('addPhotos',photos)
-    this.photos=this.$store.state.photos[0];
-    
+    this.photos=photos;
     this.search='';
    } catch (error) {
      console.log(error);
@@ -80,10 +78,8 @@ export default {
         const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
         const data = await response.json();
         const photos = data.photos;
-        this.$store.commit('addPhotoSearch',photos)
-        this.photos=this.$store.state.photos[1];
+        this.photos=photos;
         this.search='';
-          
         } catch (error) {
           console.log(error);
           
