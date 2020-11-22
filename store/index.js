@@ -5,15 +5,18 @@ export const state = ()=>({
 })
 export const  mutations = {
     // mutate the photos array here
-    addPhotos(state,photos){
-        state.photos.push(photos)
+    addPhotos(state,payload){
+        state.photos.push(payload)
+    },
+    addPhotoSearch(state,payload){
+      state.photos.push(payload)
     }
 }
 export const  actions={
-  // get photos array
- updatePhotos(photos){
-    commit('addPhotos',photos);
-  }
+  // update the photos array with new search
+    addPhotos(state,payload){
+    state.commit('addPhotos',payload)
+    }
 
 }
 export const  getters={

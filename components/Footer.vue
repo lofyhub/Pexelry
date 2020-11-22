@@ -6,6 +6,18 @@
 
     </div>
     <div class="light-footer">
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Github</a></li>
+        </ul>
 
     </div>
 
@@ -28,6 +40,15 @@ export default {
     background: rgb(18, 14, 22);
     height: 5vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+    padding-top: 0.7rem;
+}
+ul li a{
+    text-decoration: none;
 }
 
 </style>
