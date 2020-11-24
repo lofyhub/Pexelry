@@ -62,8 +62,11 @@ export default {
     const response = await fetch(`https://api.pexels.com/v1/search?query=${this.search}&per_page=80`, { headers});
     const data = await response.json();
     const photos = data.photos;
+    //store the returned data into the photos array
     this.photos=photos;
+    //prevent our input search data from showing up in the input box
     this.search='';
+
    } catch (error) {
      console.log(error);
    }
