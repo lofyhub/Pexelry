@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import config from '@/config/keys.js';
 
 export default {
   
@@ -50,7 +51,7 @@ export default {
   },
   data(){
     return{
-      api_key:'563492ad6f9170000100000111d2967d21b84fa6aedf06aba0226fd8',
+      api_key:config.keys.api_key,
       photos: [],
       search:'nature'
     }
