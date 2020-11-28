@@ -26,6 +26,13 @@
       </div>
     </div>
     <div>
+      <vue-scroll-indicator
+        height="5px"
+        color="#11998e"
+        background="none"
+      ></vue-scroll-indicator>
+    </div>
+    <div>
       <div v-if="photos.length === 0">
         <Loading />
       </div>
@@ -60,6 +67,7 @@ export default {
     };
   },
   async created() {
+    console.log(this.photos);
     //Called synchronously after the instance is created
     const headers = { Authorization: this.api_key };
     try {
@@ -107,6 +115,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 6rem;
 }
 .pexelry-head {
   display: flex;
