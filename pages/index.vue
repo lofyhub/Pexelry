@@ -27,7 +27,7 @@
     </div>
     <div>
       <vue-scroll-indicator
-        height="5px"
+        height="4px"
         color="#11998e"
         background="none"
       ></vue-scroll-indicator>
@@ -63,7 +63,7 @@ export default {
     return {
       api_key: config.keys.api_key,
       photos: [],
-      search: "nature",
+      search: "ocean wallpaper",
     };
   },
   async created() {
