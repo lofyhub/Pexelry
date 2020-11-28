@@ -1,54 +1,176 @@
 <template>
-<div class="outer-footer">
-        <div class="footer bg-light">
-        <h4>this is the footer</h4>
+  <div class="footercomp">
+    <div class="footer">
+      <div class="learn">
+        <h3>Learn</h3>
+        <ul>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >PPC Marketing</a
+            >
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">SEO</a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >UX/UI</a
+            >
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >Web Design</a
+            >
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >Social Media</a
+            >
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >Case Studies</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="product">
+        <h3>Product</h3>
 
-
+        <ul>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Features</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </div>
+      <div class="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Our Team</a></li>
+          <li><a href="http://">Investors</a></li>
+        </ul>
+      </div>
+      <div class="newsletter">
+        <h3>Join Our newsletter</h3>
+        <div class="news">
+          <form>
+            <input
+              type="email"
+              value=""
+              required
+              placeholder="Add your email here"
+            />
+            <span><button>SIGN UP</button></span> <br />
+            <span class="span">Get exclusive deals and more!</span>
+          </form>
+        </div>
+        <div class="connect">
+          <h3>Connect with us</h3>
+          <div class="social">
+            <ul>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="light-footer">
-        <ul>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-        </ul>
-        <ul>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
-        </ul>
-        <ul>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Youtube</a></li>
-        </ul>
-        <ul>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Github</a></li>
-        </ul>
-
+    <div class="copyright">
+      Copyright @ 2020 Pexelry "pic it" , All rights Reserved | Terms &
+      Conditions | Private Policy
     </div>
-
-</div>
-
+  </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
 <style scoped>
-.footer{
-    width: 1120px;
-    margin: 0 auto;
-    padding: 0;
-    border: 0;
+.footercomp {
+  background-color: lightseagreen;
+  padding-top: 2rem;
 }
-.light-footer{
-    background: rgb(18, 14, 22);
-    height: 5vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+ul {
+  list-style: none;
 }
-ul{
-    list-style: none;
-    padding-top: 0.7rem;
+ul li a {
+  color: #333333;
 }
-ul li a{
-    text-decoration: none;
+ul li a:hover {
+  color: #333333;
+  text-decoration: none;
 }
-
+ul li {
+  padding: 0.5rem 0;
+}
+h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+input {
+  padding: 4px 18px;
+  opacity: 0.5;
+  font-style: italic;
+}
+input:focus {
+  outline: none;
+}
+button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background: green;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #28a745;
+}
+button:focus {
+  outline: none;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.social ul {
+  display: flex;
+}
+.social ul li {
+  padding-left: 0.5rem;
+  padding-top: 0;
+}
+.connect h3 {
+  padding: 1rem 0;
+}
+.span {
+  opacity: 0.5;
+  padding-top: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-style: italic;
+}
 </style>

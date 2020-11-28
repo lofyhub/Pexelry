@@ -37,7 +37,7 @@ $ npm run start
 $ npm run generate
 ```
 
-#### You can Contribute to this project if you want to
+#### This project is free to contribution from anyone
 
 clone the repo and fix issues :v:
 
