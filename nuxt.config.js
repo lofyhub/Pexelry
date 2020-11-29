@@ -26,12 +26,27 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+        [
+      'nuxt-fontawesome', {
+        imports: [
+         {
+           set: '@fortawesome/free-solid-svg-icons',
+           icons: ['fas']
+         },
+         {
+           set:'@fortawesome/free-brands-svg-icons',
+           icons: ['fab']
+         }
+       ]
+      }
+]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

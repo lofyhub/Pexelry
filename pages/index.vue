@@ -53,7 +53,6 @@
 
 <script>
 import config from "@/config/keys.js";
-
 export default {
   components: {
     Photos: () => import("@/components/photos"),

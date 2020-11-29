@@ -72,18 +72,33 @@
             <ul>
               <li>
                 <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >Twitter</a
-                >
+                  ><font-awesome-icon :icon="['fab', 'instagram']"
+                /></a>
               </li>
               <li>
                 <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >Facebook</a
-                >
+                  ><font-awesome-icon :icon="['fab', 'twitter']"
+                /></a>
               </li>
               <li>
                 <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >Instagram</a
-                >
+                  ><font-awesome-icon :icon="['fab', 'instagram']"
+                /></a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><font-awesome-icon :icon="['fab', 'github']"
+                /></a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><font-awesome-icon :icon="['fab', 'youtube']"
+                /></a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><font-awesome-icon :icon="['fab', 'linkedin']"
+                /></a>
               </li>
             </ul>
           </div>
@@ -150,6 +165,7 @@ button:focus {
 }
 .social ul {
   display: flex;
+  font-size: 21px;
 }
 .social ul li {
   padding-left: 0.5rem;
