@@ -8,8 +8,10 @@
 <script>
 export default {
   components: {
-    Navheader: () => import("@/components/Navheader"),
-    Footer: () => import("@/components/Footer"),
+    Navheader: () =>
+      import(/* webpackChunkName: "Navheader" */ "@/components/Navheader"),
+    Footer: () =>
+      import(/* webpackChunkName: "Footer" */ "@/components/Footer"),
   },
 };
 </script>

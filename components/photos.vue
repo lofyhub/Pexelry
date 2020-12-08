@@ -7,9 +7,7 @@
       /></span>
       <p class="card-text">{{ name }}</p>
       <span><button :href="img" download>Download</button></span>
-      <a href="" class="share"
-        ><font-awesome-icon :icon="['fas', 'share-alt']"
-      /></a>
+      <a href="" class="share">Share</a>
     </div>
   </div>
 </template>
@@ -78,7 +76,7 @@ button:focus {
 }
 .share {
   color: #333333;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding-left: 15px;
 }
 </style>

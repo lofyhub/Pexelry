@@ -20,9 +20,15 @@ Pexelry is built with:
     - Nuxt.js
     - Vuex
 
+Plugins
+
+    - vue-scroll-indicator
+    - Nuxt-fontawesome
+
 Clone the repo to your local machine and then follow the procedure below
 
 ```bash
+
 # installs all the packagees and dependencies needed for this project
 $ npm install
 
@@ -31,14 +37,16 @@ $ npm run dev
 
 # build for production and launch server
 $ npm run build
+
 $ npm run start
 
 # generates the static project
 $ npm run generate
+
 ```
 
 #### This project is free to contribution from anyone
 
-clone the repo and fix issues :v:
+Clone the repo and fix issues :v:
 
 Check out the for an upcoming YouTube video version for this project soon here [YouTube](https://www.youtube.com/channel/UCNCzNrpq0fHxFqQYCmbwAcA).

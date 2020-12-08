@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="pexelry-about">
-      <h1>Pexelry</h1>
+      <h3>Pexelry</h3>
       <p>
         Application that leverages the pexels api to enable you find beautifull
         photos and pictures.

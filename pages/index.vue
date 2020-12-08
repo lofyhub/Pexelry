@@ -10,12 +10,15 @@
       <div class="search-wrapper">
         <form @submit.prevent="getSearch">
           <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search photos here ..."
-              v-model="search"
-            />
+            <label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search photos here ..."
+                v-model="search"
+              />
+            </label>
+
             <span
               ><button type="submit" class="input-group-addon bg-success">
                 Search
@@ -55,8 +58,10 @@
 import config from "@/config/keys.js";
 export default {
   components: {
-    Photos: () => import("@/components/photos"),
-    Loading: () => import("@/components/Loading"),
+    Photos: () =>
+      import(/* webpackChunkName: "Photos" */ "@/components/photos"),
+    Loading: () =>
+      import(/* webpackChunkName: "Loading" */ "@/components/Loading"),
   },
   data() {
     return {
