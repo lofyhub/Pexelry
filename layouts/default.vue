@@ -6,12 +6,14 @@
   </div>
 </template>
 <script>
+const Navheader = () =>
+  import(/* webpackChunkName: "Navheadercomponent" */ "@/components/Navheader");
+const Footer = () =>
+  import(/* webpackChunkName: "Footercomponent" */ "@/components/Footer");
 export default {
   components: {
-    Navheader: () =>
-      import(/* webpackChunkName: "Navheader" */ "@/components/Navheader"),
-    Footer: () =>
-      import(/* webpackChunkName: "Footer" */ "@/components/Footer"),
+    Navheader,
+    Footer,
   },
 };
 </script>

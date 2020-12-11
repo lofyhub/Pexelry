@@ -7,36 +7,38 @@
       /></span>
       <p class="card-text">{{ name }}</p>
       <span><button :href="img" download>Download</button></span>
-      <a href="" class="share">Share</a>
+      <a href="" class="download" @click="getDownload()"
+        ><font-awesome-icon :icon="['fas', 'download']"
+      /></a>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "Photos",
-  props: ["img", "name", "attrib", "imgcap"],
-  // methods:{
-  //     forceFileDownload(response){
-  //         const url = window.URL.createObjectURL(new Blob([response.data]))
-  //         const link = document.createElement('a')
-  //         link.href = url
-  //         link.setAttribute('download', this.img) //or any other extension
-  //         document.body.appendChild(link)
-  //         link.click()
-  //     },
-  //     downloadWithVueResource() {
-  //         this.$http({
-  //             method: 'get',
-  //             url: this.img,
-  //             responseType: 'arraybuffer'
-  //         })
-  //         .then(response => {
-  //             this.forceFileDownload(response)
-  //         })
-  //         .catch(() => console.log('error occured'))
+  props: ["img", "name", "attrib", "imgcap", "id"],
+  data() {
+    return {
+      photos: {},
+    };
+  },
+  methods: {
+    getDownload() {
+      axios({
+        url: this.img,
+        method: "GET",
+        responseTyepe: "blob",
+      }).then((response) => {
+        var fileUrl = window.URL.createObjectURL(new Blob([response.data]));
+        var fileLink = document.createElement("a");
+        fileLink.href = fileUrl;
 
-  // },
-  // }
+        fileLink.setAttribute("download", "pexelry download.jpg");
+        document.body.appendChild(fileLink);
+        fileLink.click();
+      });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -74,9 +76,9 @@ button:hover {
 button:focus {
   border: none;
 }
-.share {
+.download {
   color: #333333;
   font-size: 1.1rem;
-  padding-left: 15px;
+  padding-left: 8px;
 }
 </style>

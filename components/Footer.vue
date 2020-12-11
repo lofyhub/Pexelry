@@ -72,11 +72,6 @@
             <ul>
               <li>
                 <a href="http://" target="_blank" rel="noopener noreferrer"
-                  ><font-awesome-icon :icon="['fab', 'instagram']"
-                /></a>
-              </li>
-              <li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
                   ><font-awesome-icon :icon="['fab', 'twitter']"
                 /></a>
               </li>

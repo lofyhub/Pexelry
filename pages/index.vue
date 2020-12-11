@@ -29,6 +29,7 @@
       </div>
     </div>
     <div>
+      <!--vue-scroll-indicator -->
       <vue-scroll-indicator
         height="4px"
         color="#32d9cb"
@@ -56,12 +57,14 @@
 
 <script>
 import config from "@/config/keys.js";
+const Photos = () =>
+  import(/* webpackChunkName: "Photoscomponent" */ "@/components/photos");
+const Loading = () =>
+  import(/* webpackChunkName: "Loadingcomponent" */ "@/components/Loading");
 export default {
   components: {
-    Photos: () =>
-      import(/* webpackChunkName: "Photos" */ "@/components/photos"),
-    Loading: () =>
-      import(/* webpackChunkName: "Loading" */ "@/components/Loading"),
+    Photos,
+    Loading,
   },
   data() {
     return {
