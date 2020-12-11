@@ -6,7 +6,6 @@
         ><img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"
       /></span>
       <p class="card-text">{{ name }}</p>
-      <span><button :href="img" download>Download</button></span>
       <p class="download" @click="getDownload()">
         <font-awesome-icon :icon="['fas', 'download']" />
       </p>
@@ -19,14 +18,13 @@ export default {
   name: "Photos",
   props: ["img", "name", "attrib", "imgcap", "id"],
   data() {
-    return {
-      photos: {},
-    };
+    return {};
   },
   methods: {
     getDownload() {
+      let self = this;
       axios({
-        url: this.img,
+        url: `${self.img}`,
         method: "GET",
         responseTyepe: "blob",
       }).then((response) => {
@@ -59,28 +57,10 @@ p {
   display: inline-block;
   padding-left: 25px;
 }
-button {
-  border: none;
-  background: orchid;
-  padding: 3px 7px;
-  margin-left: 5px;
-  border-radius: 5px;
-}
-button:hover {
-  border: none;
-  background: rgb(61, 61, 61);
-  color: rgb(194, 96, 191);
-  padding: 3px 7px;
-  margin-left: 5px;
-  border-radius: 5px;
-}
-button:focus {
-  border: none;
-}
 .download {
   cursor: pointer;
   color: #333333;
   font-size: 1.1rem;
-  padding-left: 8px;
+  padding-left: 2.5rem;
 }
 </style>
