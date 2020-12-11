@@ -7,13 +7,14 @@
       /></span>
       <p class="card-text">{{ name }}</p>
       <span><button :href="img" download>Download</button></span>
-      <a href="" class="download" @click="getDownload()"
-        ><font-awesome-icon :icon="['fas', 'download']"
-      /></a>
+      <p class="download" @click="getDownload()">
+        <font-awesome-icon :icon="['fas', 'download']" />
+      </p>
     </div>
   </div>
 </template>
 <script>
+const axios = require("axios");
 export default {
   name: "Photos",
   props: ["img", "name", "attrib", "imgcap", "id"],
@@ -77,6 +78,7 @@ button:focus {
   border: none;
 }
 .download {
+  cursor: pointer;
   color: #333333;
   font-size: 1.1rem;
   padding-left: 8px;
