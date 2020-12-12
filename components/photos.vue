@@ -18,13 +18,17 @@ export default {
   name: "Photos",
   props: ["img", "name", "attrib", "imgcap", "id"],
   data() {
-    return {};
+    return {
+      idm: this.$props.id,
+    };
+  },
+  created() {
+    console.log(this.idm);
   },
   methods: {
     getDownload() {
-      let self = this;
       axios({
-        url: `${self.img}`,
+        url: `${this.url}`,
         method: "GET",
         responseTyepe: "blob",
       }).then((response) => {
@@ -32,7 +36,7 @@ export default {
         var fileLink = document.createElement("a");
         fileLink.href = fileUrl;
 
-        fileLink.setAttribute("download", "pexelry download.jpg");
+        fileLink.setAttribute("download", "pexelry download.jpeg");
         document.body.appendChild(fileLink);
         fileLink.click();
       });
