@@ -1,4 +1,6 @@
 export default {
+    // Target (https://go.nuxtjs.dev/config-target)
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'PEXELRY - PIC IT',
@@ -28,25 +30,7 @@ export default {
   buildModules: [
     
   ],
-  configureWebpack: {
-    optimization: {
-      runtimeChunk: 'single',
-      splitChunks: {
-        chunks: 'all',
-        maxInitialRequests: Infinity,
-        minSize: 0,
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name(module) {
-              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-              return `npm.${packageName.replace('@', '')}`;
-            },
-          },
-        },
-      },
-    },
-  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
@@ -69,6 +53,25 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+     configureWebpack: {
+    optimization: {
+      runtimeChunk: 'single',
+      splitChunks: {
+        chunks: 'all',
+        maxInitialRequests: Infinity,
+        minSize: 0,
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module) {
+              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+              return `npm.${packageName.replace('@', '')}`;
+            },
+          },
+        },
+      },
+    },
+  },
     analyze:true,
   }
 }

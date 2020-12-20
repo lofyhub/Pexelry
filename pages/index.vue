@@ -31,7 +31,7 @@
     <div>
       <!--vue-scroll-indicator -->
       <vue-scroll-indicator
-        height="4px"
+        height="3px"
         color="#32d9cb"
         background="none"
       ></vue-scroll-indicator>

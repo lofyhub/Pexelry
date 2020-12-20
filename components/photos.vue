@@ -19,18 +19,20 @@ export default {
   props: ["img", "name", "attrib", "imgcap", "id"],
   data() {
     return {
-      idm: this.$props.id,
+      // dimage = download image
+      dimage: this.$props.img,
     };
   },
   created() {
     console.log(this.idm);
   },
   methods: {
+    // download image
     getDownload() {
       axios({
-        url: `${this.url}`,
+        url: `${this.dimage}`,
         method: "GET",
-        responseTyepe: "blob",
+        responseType: "blob",
       }).then((response) => {
         var fileUrl = window.URL.createObjectURL(new Blob([response.data]));
         var fileLink = document.createElement("a");
