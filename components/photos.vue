@@ -2,9 +2,10 @@
   <div class="card" style="width: 25rem">
     <img class="card-img-top" :src="img" :alt="attrib" style="height: 20rem" />
     <div class="card-body">
-      <span
-        ><img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"
+      <span>
+        <img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"
       /></span>
+
       <p class="card-text">{{ name }}</p>
       <p class="download" @click="getDownload()">
         <font-awesome-icon :icon="['fas', 'download']" />
@@ -13,18 +14,17 @@
   </div>
 </template>
 <script>
+import lozad from "lozad";
 const axios = require("axios");
 export default {
   name: "Photos",
   props: ["img", "name", "attrib", "imgcap", "id"],
   data() {
     return {
+      loading: true,
       // dimage = download image
       dimage: this.$props.img,
     };
-  },
-  created() {
-    console.log(this.idm);
   },
   methods: {
     // download image

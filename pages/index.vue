@@ -56,6 +56,7 @@
 </template>
 
 <script>
+import lozad from "lozad";
 import config from "@/config/keys.js";
 const Photos = () =>
   import(/* webpackChunkName: "Photoscomponent" */ "@/components/photos");
@@ -65,6 +66,28 @@ export default {
   components: {
     Photos,
     Loading,
+  },
+  props: {
+    backgroundColor: {
+      type: String,
+      default: "#efefef",
+    },
+    height: {
+      type: Number,
+      default: null,
+    },
+    lazySrc: {
+      type: String,
+      default: null,
+    },
+    lazySrcset: {
+      type: String,
+      default: null,
+    },
+    width: {
+      type: Number,
+      default: null,
+    },
   },
   data() {
     return {
@@ -79,7 +102,7 @@ export default {
     const headers = { Authorization: this.api_key };
     try {
       const response = await fetch(
-        `https://api.pexels.com/v1/search?query=${this.search}&per_page=80`,
+        `https://api.pexels.com/v1/search?query=${this.search}&per_page=40`,
         { headers }
       );
       const data = await response.json();
@@ -99,7 +122,7 @@ export default {
       // fetch photos from the api
       try {
         const response = await fetch(
-          `https://api.pexels.com/v1/search?query=${this.search}&per_page=80`,
+          `https://api.pexels.com/v1/search?query=${this.search}&per_page=40`,
           { headers }
         );
         const data = await response.json();
