@@ -57,7 +57,7 @@ export default {};
 </script>
 <style scoped>
 .about-section {
-  background-image: url("../assets/pexels-marley-clovelly-3673525.jpg");
+  background-image: url("../assets/pexels-marley-clovelly-3673525.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

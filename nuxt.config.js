@@ -5,13 +5,65 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'PEXELRY - PIC IT',
+        htmlAttrs: {
+      lang: "en",  // it sets the language English
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+            // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      { hid: 'description', name: 'description', content: 'PEXELRY - PIC IT' },
+  { property: "og:site_name", content: "PEXELRY - PIC IT" },
+  { hid: "og:type", property: "og:type", content: "website" },
+  {
+    hid: "og:url",
+    property: "og:url",
+    content: "https://pexelry.netlify.app",
+  },
+  {
+    hid: "og:title",
+    property: "og:title",
+    content: "PEXELRY - PIC IT",
+  },
+  {
+    hid: "og:description",
+    property: "og:description",
+    content: "PEXELRY - PIC IT",
+  },
+  {
+    hid: "og:image",
+    property: "og:image",
+    content: "https://images.unsplash.com/photo-1591597787791-4b837b0bfa5a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
+  },
+  { property: "og:image:width", content: "740" },
+  { property: "og:image:height", content: "300" },
+    { name: "twitter:site", content: "@amjohnphilip" },
+  { name: "twitter:card", content: "summary_large_image" },
+  {
+    hid: "twitter:url",
+    name: "twitter:url",
+    content: "https://pexelry.netlify.app",
+  },
+  {
+    hid: "twitter:title",
+    name: "twitter:title",
+    content: "PEXELRY - PIC IT",
+  },
+  {
+    hid: "twitter:description",
+    name: "twitter:description",
+    content: "PEXELRY - PIC IT"
+  },
+  {
+    hid: "twitter:image",
+    name: "twitter:image",
+    content: "https://images.unsplash.com/photo-1591597787791-4b837b0bfa5a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
+  },
+
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/Pexelry.jpg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/Pexelry.webp' }
     ]
   },
 
@@ -31,6 +83,11 @@ export default {
   buildModules: [
     
   ],
+  pageTransition:{
+  name:'page',
+  mode:'out-in'
+
+},
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

@@ -141,7 +141,7 @@ export default {
 .pexelry-wrapper {
   width: 100%;
   height: 500px;
-  background-image: url("../assets/pexels-marley-clovelly-3673525.jpg");
+  background-image: url("../assets/pexels-marley-clovelly-3673525.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
