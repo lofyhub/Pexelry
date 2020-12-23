@@ -56,7 +56,6 @@
 </template>
 
 <script>
-import lozad from "lozad";
 import config from "@/config/keys.js";
 const Photos = () =>
   import(/* webpackChunkName: "Photoscomponent" */ "@/components/photos");
@@ -67,28 +66,6 @@ export default {
     Photos,
     Loading,
   },
-  props: {
-    backgroundColor: {
-      type: String,
-      default: "#efefef",
-    },
-    height: {
-      type: Number,
-      default: null,
-    },
-    lazySrc: {
-      type: String,
-      default: null,
-    },
-    lazySrcset: {
-      type: String,
-      default: null,
-    },
-    width: {
-      type: Number,
-      default: null,
-    },
-  },
   data() {
     return {
       api_key: config.keys.api_key,
@@ -97,7 +74,6 @@ export default {
     };
   },
   async created() {
-    console.log(this.photos);
     //Called synchronously after the instance is created
     const headers = { Authorization: this.api_key };
     try {
