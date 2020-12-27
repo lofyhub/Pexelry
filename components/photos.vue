@@ -1,9 +1,20 @@
 <template>
   <div class="card" style="width: 25rem">
-    <img class="card-img-top" :src="img" :alt="attrib" style="height: 20rem" />
+    <img
+      class="card-img-top"
+      :src="img"
+      :alt="attrib"
+      style="height: 20rem"
+      height="320"
+    />
     <div class="card-body">
       <span>
-        <img class="img-rounded img-responsive" :src="imgcap" :alt="attrib"
+        <img
+          class="img-rounded img-responsive"
+          width="40"
+          height="40"
+          :src="imgcap"
+          :alt="attrib"
       /></span>
 
       <p class="card-text">{{ name }}</p>
