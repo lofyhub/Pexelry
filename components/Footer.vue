@@ -192,7 +192,7 @@ export default {};
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: normal;
   margin: 0;
 }
@@ -200,7 +200,7 @@ export default {};
 .footer-distributed .footer-company-about span {
   display: block;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
 }
