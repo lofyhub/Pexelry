@@ -15,15 +15,17 @@ Pexelry is an image finder web application that leverages the [Pexels](https://w
 
 Pexelry is built with:
 
-    - Vue.js
-    - Bootstrap-vue
-    - Nuxt.js
-    - Vuex
+- [x] Vue.js
+- [X] Bootstrap-vue
+- [X] Nuxt.js
+- [X] Vuex
+
 
 Plugins
 
-    - vue-scroll-indicator
-    - Nuxt-fontawesome
+- [x] vue-scroll-indicator
+- [X] Nuxt-fontawesome
+
 
 Clone the repo to your local machine and then follow the procedure below
 

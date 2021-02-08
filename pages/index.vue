@@ -73,6 +73,12 @@ export default {
       search: "ocean wallpaper",
     };
   },
+  computed: {
+    photoos() {
+      return this.$store.state.photos;
+      console.log(this.$store.state.photos);
+    },
+  },
   async created() {
     //Called synchronously after the instance is created
     const headers = { Authorization: this.api_key };
