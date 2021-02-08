@@ -23,8 +23,8 @@ Pexelry is built with:
 
 Plugins
 
-- [x] vue-scroll-indicator
-- [X] Nuxt-fontawesome
+ [x] vue-scroll-indicator
+ [X] Nuxt-fontawesome
 
 
 Clone the repo to your local machine and then follow the procedure below
