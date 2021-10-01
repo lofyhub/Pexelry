@@ -70,7 +70,7 @@ export default {
     return {
       api_key: config.keys.api_key,
       photos: [],
-      search: "ocean wallpaper",
+      search: "store",
     };
   },
   computed: {
