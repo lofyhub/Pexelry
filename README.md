@@ -1,4 +1,9 @@
-# Pexelry
+
+<div align="center">
+
+<h1>Pexelry</h1>
+
+</div>
 
 :earth_americas:
 
