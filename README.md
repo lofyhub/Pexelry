@@ -21,15 +21,8 @@ Pexelry is an image finder web application that leverages the [Pexels](https://w
 Pexelry is built with:
 
 - [x] Vue.js
-- [X] Bootstrap-vue
-- [X] Nuxt.js
-- [X] Vuex
+- [X] Pinia
 
-
-Plugins
-
- -  [x] vue-scroll-indicator
- -  [X] Nuxt-fontawesome
 
 
 Clone the repo to your local machine and then follow the procedure below
@@ -37,23 +30,21 @@ Clone the repo to your local machine and then follow the procedure below
 ```bash
 
 # installs all the packagees and dependencies needed for this project
-$ npm install
+$ pnpm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ pnpm run server
 
 # build for production and launch server
-$ npm run build
+$ pnpm run build
 
-$ npm run start
+$ pnpm run start
 
 # generates the static project
-$ npm run generate
+$ pnpm run generate
 
 ```
 
 #### This project is free to contribution from anyone
 
 Clone the repo and fix issues :v:
-
-Check out the for an upcoming YouTube video version for this project soon here [YouTube](https://www.youtube.com/channel/UCNCzNrpq0fHxFqQYCmbwAcA).
