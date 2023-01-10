@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { defineProps, withDefaults } from "vue";
+import { defineProps, ref, withDefaults } from "vue";
 import axios from "axios";
+import PhotoPopup from "@/components/PhotoPopup.vue";
 
 import DownloadIcon from "@/components/icons/Download.vue";
 
@@ -11,9 +12,12 @@ const props = withDefaults(
     attrib: string;
     imgcap: string;
     id: number;
+    img_large: string;
   }>(),
   {}
 );
+
+const showImagePopup = ref(false);
 
 // methods
 function getDownload() {
@@ -34,7 +38,12 @@ function getDownload() {
 </script>
 <template>
   <div class="w-96 h-80 ml-4 border mb-6 rounded overflow-hidden">
-    <img class="w-full h-60" :src="img" :alt="attrib" />
+    <img
+      class="w-full h-60 hover:cursor-pointer"
+      :src="img"
+      :alt="attrib"
+      @click="showImagePopup = true"
+    />
     <div class="flex my-4 ml-6">
       <img class="h-12 w-12 rounded-full" :src="imgcap" :alt="attrib" />
 
@@ -53,5 +62,12 @@ function getDownload() {
       </div>
     </div>
   </div>
+  <Teleport to="body">
+    <PhotoPopup
+      v-if="showImagePopup"
+      :image="props.img_large"
+      @close="showImagePopup = false"
+    />
+  </Teleport>
 </template>
 <style scoped></style>

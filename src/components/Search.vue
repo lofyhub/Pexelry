@@ -63,6 +63,7 @@ function getSearch() {
         :name="photo.photographer"
         :attrib="photo.photographer_url"
         :img="photo.src.medium"
+        :img_large="photo.src.large2x"
         :imgcap="photo.src.portrait"
         :id="photo.id"
       />
