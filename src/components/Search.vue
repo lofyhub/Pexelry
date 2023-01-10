@@ -20,13 +20,14 @@ function getSearch() {
     return;
   }
   store.fetchPhotos(searchinput.value);
+  searchinput.value = ``;
 }
 </script>
 
 <template>
   <div>
     <div
-      class="w-full h-[400px] py-10 pwrapper bg-cover bg-no-repeat bg-center"
+      class="w-full h-[400px] py-10 bg-cover bg-no-repeat bg-center bg-[url('https://images.pexels.com/photos/14700386/pexels-photo-14700386.jpeg')]"
     >
       <div class="text-center pt-10">
         <h1 class="font-bold text-8xl">Pexelry</h1>
@@ -38,7 +39,7 @@ function getSearch() {
             <label>
               <input
                 type="text"
-                class="py-2 px-8 border"
+                class="py-2 px-8 border focus:outline-none"
                 placeholder="Search photos here ..."
                 v-model="searchinput"
               />
@@ -71,8 +72,4 @@ function getSearch() {
   </div>
 </template>
 
-<style scoped>
-.pwrapper {
-  background-image: url("https://images.pexels.com/photos/14700386/pexels-photo-14700386.jpeg?auto=compress");
-}
-</style>
+<style scoped></style>
