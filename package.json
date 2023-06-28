@@ -12,7 +12,7 @@
     "url": "https://github.com/dxphilo/vue-ts-starter.git"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

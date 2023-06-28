@@ -33,7 +33,7 @@ Clone the repo to your local machine and then follow the procedure below
 $ pnpm install
 
 # serve with hot reload at localhost:3000
-$ pnpm run server
+$ pnpm run dev
 
 # build for production and launch server
 $ pnpm run build

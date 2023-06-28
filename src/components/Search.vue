@@ -57,11 +57,12 @@ function getSearch() {
         </form>
       </div>
     </div>
-    <div class="w-4/5 mx-auto flex flex-wrap my-8">
+    <div class="w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 py-10">
       <Card
         v-for="photo in photos"
-        v-bind:key="photo.id"
+        :key="photo.id"
         :name="photo.photographer"
+        :photographer_url="photo.photographer_url"
         :attrib="photo.photographer_url"
         :img="photo.src.medium"
         :img_large="photo.src.large2x"

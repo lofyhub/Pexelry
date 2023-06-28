@@ -13,6 +13,7 @@ const props = withDefaults(
     imgcap: string;
     id: number;
     img_large: string;
+    photographer_ur: string;
   }>(),
   {}
 );
@@ -37,27 +38,32 @@ function getDownload() {
 }
 </script>
 <template>
-  <div class="w-96 h-80 ml-4 border mb-6 rounded overflow-hidden">
+  <div class="max-w-full h-auto border rounded-md overflow-hidden">
     <img
-      class="w-full h-60 hover:cursor-pointer"
-      :src="img"
+      class="w-full h-80 hover:cursor-pointer"
+      :src="img_large"
       :alt="attrib"
       @click="showImagePopup = true"
     />
-    <div class="flex my-4 ml-6">
-      <img class="h-12 w-12 rounded-full" :src="imgcap" :alt="attrib" />
+    <div class="flex py-4 space-x-4 ml-3">
+      {{ photographer_ur }}
+      <img class="h-12 w-12 rounded-full" :src="img" :alt="attrib" />
 
-      <div class="flex ml-10 mt-3">
+      <div class="flex justify-around space-x-20">
         <div>
-          <p class="font-bold truncate text-base mr-8">
+          <p class="font-bold truncate text-base">
             {{ name.length > 10 ? name.slice(0, name.length - 6) : name }}
           </p>
+          <span class="text-gray-400">
+            @{{ name.length > 10 ? name.slice(0, name.length - 6) : name }}
+          </span>
         </div>
 
-        <div @click="getDownload()">
-          <DownloadIcon
-            class="w-6 h-6 rounded-full text-center items-center justify-center ml-1"
-          />
+        <div
+          @click="getDownload()"
+          class="w-6 h-6 rounded-full text-center cursor-pointer"
+        >
+          <DownloadIcon />
         </div>
       </div>
     </div>
