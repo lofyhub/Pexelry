@@ -57,7 +57,9 @@ function getSearch() {
         </form>
       </div>
     </div>
-    <div class="w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 py-10">
+    <div
+      class="w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 py-10"
+    >
       <Card
         v-for="photo in photos"
         :key="photo.id"
